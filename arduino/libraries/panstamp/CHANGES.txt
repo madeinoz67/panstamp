@@ -1,0 +1,3 @@
+2014-06-09
+  * Carrier Frequency now defaults to 915Mhz.
+  * Removed rcOscCalibrate as was causing problems with v1 boards.
