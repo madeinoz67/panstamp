@@ -209,7 +209,7 @@ void PANSTAMP::init()
   int i;
 
   // Calibrate internal RC oscillator
-  rtcCrystal = rcOscCalibrate();
+    rtcCrystal = false; //rcOscCalibrate();
 
   // Intialize registers
   for(i=0 ; i<regTableSize ; i++)
