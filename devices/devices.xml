@@ -18,6 +18,10 @@
     <dev id="15" name="easyvr" label="EasyVR voice recognition module"/>
     <dev id="16" name="firmloader" label="Firmware server"/>
   </developer>
+  <developer id="16" name="Strobotics">
+    <dev id="1" name="temphum"  label="Temperature/Humidity DHx/SHTx Sensor"/>
+    <dev id="2" name="temppress"  label="Temperature/Barometric BMP085 Sensor"/>
+  </developer>
   <developer id="17" name="Robomotic">
     <dev id="1" name="EmmaTI" label="Emma watch"/>
     <dev id="2" name="SeismoFloor" label="Floor sensor"/>
