@@ -234,7 +234,7 @@ void CC1101::setDefaultRegs(void)
 
   // Carrier frequency
   if (carrierFreq == 0xFF)
-    setCarrierFreq(CFREQ_868);  // Set default carrier frequency = 868 MHz
+    setCarrierFreq(CFREQ_915);  // Set default carrier frequency = 915 MHz
   else
     setCarrierFreq(carrierFreq);
 
