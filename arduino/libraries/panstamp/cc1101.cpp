@@ -233,10 +233,14 @@ void CC1101::setDefaultRegs(void)
   writeReg(CC1101_FSCTRL0,  CC1101_DEFVAL_FSCTRL0);
 
   // Carrier frequency
+<<<<<<< HEAD
   if (carrierFreq == 0xFF)
     setCarrierFreq(CFREQ_915);  // Set default carrier frequency = 915 MHz
   else
     setCarrierFreq(carrierFreq);
+=======
+  setCarrierFreq(carrierFreq);
+>>>>>>> upstream/master
 
   writeReg(CC1101_MDMCFG4,  CC1101_DEFVAL_MDMCFG4);
   writeReg(CC1101_MDMCFG3,  CC1101_DEFVAL_MDMCFG3);
@@ -275,9 +279,13 @@ void CC1101::setDefaultRegs(void)
  * init
  * 
  * Initialize CC1101
+ * 
+ * 'freq'	New carrier frequency
  */
-void CC1101::init(void) 
+void CC1101::init(byte freq) 
 {
+  carrierFreq = freq;
+  
   spi.init();                           // Initialize SPI interface
   pinMode(GDO0, INPUT);                 // Config GDO0 as input
 
