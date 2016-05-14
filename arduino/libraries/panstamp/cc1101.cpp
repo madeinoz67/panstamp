@@ -233,7 +233,10 @@ void CC1101::setDefaultRegs(void)
   writeReg(CC1101_FSCTRL0,  CC1101_DEFVAL_FSCTRL0);
 
   // Carrier frequency
-  setCarrierFreq(carrierFreq);
+  if (carrierFreq == 0xFF)
+    setCarrierFreq(CFREQ_915);  // Set default carrier frequency = 915 MHz
+  else
+    setCarrierFreq(carrierFreq);
 
   writeReg(CC1101_MDMCFG4,  CC1101_DEFVAL_MDMCFG4);
   writeReg(CC1101_MDMCFG3,  CC1101_DEFVAL_MDMCFG3);
